@@ -28,18 +28,35 @@ new Vue(
                 },
             ],
             starred: [1],
-            applied: [0],
-            
+            applied: [],
+
         },
 
         methods: {
-            
+
             classYellow: function (index) {
-                if(this.starred.includes(index + 1)) { 
+                if (this.starred.includes(index + 1)) {
                     return "yellow";
                 };
             },
+
+            pushPreferiti: function (index) {
+                this.starred.push(index + 1);
+            },
+
+            pushApplied: function (index) {
+                this.applied.push(index + 1);
+            },
+
+            classRed: function (index) {
+                if (this.applied.includes(index + 1)) {
+                    return "red";
+                    
+                };
+            },
+
+
         },
     });
 
-    console.log();
+console.log();

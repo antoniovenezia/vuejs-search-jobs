@@ -33,8 +33,9 @@
             </div>
             <div class="icon">
                 <!-- <i class="far fa-star" :class="offer.position === 'BackEnd Developer' ? 'yellow' : ''"></i> -->
-                <i class="far fa-star" :class="classYellow(index)"></i>
+                <i class="far fa-star" :class="classYellow(index)" @click="pushPreferiti(index)"></i>
             </div>
+            <button @click="pushApplied(index)" :class="classRed(index)" class="fw-bold">Apply</button>
             <img class="" :src="offer.logo" alt="">
         </div>
 
