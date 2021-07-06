@@ -27,12 +27,23 @@ new Vue(
                     contract: 'Part Time'
                 },
             ],
+            starred: [1],
+            applied: [0],
+            currentIndex: ""
 
         },
 
         methods: {
+            currentIndexFunction: function(){
+                this.currentIndex = index;
+            },
 
+            classYellow: function () {
+                if(this.starred.includes(this.jobs[index])) { 
+                    return "yellow";
+                };
+            },
         },
-    })
+    });
 
-console.log();
+    console.log();
