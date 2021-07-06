@@ -29,17 +29,13 @@ new Vue(
             ],
             starred: [1],
             applied: [0],
-            currentIndex: "",
             
         },
 
         methods: {
-            currentIndexFunction: function(){
-                this.currentIndex = this.jobs[index];
-            },
-
-            classYellow: function () {
-                if(this.starred.includes(this.jobs[this.currentIndex])) { 
+            
+            classYellow: function (index) {
+                if(this.starred.includes(index + 1)) { 
                     return "yellow";
                 };
             },
