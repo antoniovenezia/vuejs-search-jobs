@@ -32,7 +32,7 @@
                 <div>{{offer.description}}</div>
             </div>
             <div class="icon">
-                <i class="far fa-star"></i>
+                <i class="far fa-star" :class="offer.position === 'BackEnd Developer' ? 'yellow' : ''"></i>
             </div>
             <img class="" :src="offer.logo" alt="">
         </div>
