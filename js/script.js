@@ -86,8 +86,8 @@ new Vue(
             pushPreferiti: function (index) {
                 if (!this.starred.includes(index) && !this.applied.includes(index)) {
                     this.starred.push(index);
-                    this.listStarred.push(this.jobs[index]);
                 };
+                this.listStarred.push(this.jobs[index]);
             },
 
             pushApplied: function (index) {
